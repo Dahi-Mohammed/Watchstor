@@ -11,7 +11,7 @@ const products = [
     { id: 4, name: "ساعة تيسو كلاسيك", category: "mens", price: 2200, image: "./images/Img4.webp", desc: "ساعة رجالية بسوار جلد طبيعي وتصميم رسمي يناسب العمل.", stock: 10 },
     { id: 5, name: "ساعة كاسيو جي شوك", category: "mens", price: 1500, image: "./images/Img5.jpeg", desc: "ساعة قوية مقاومة للصدمات والماء، مثالية للاستخدام الشاق.", stock: 6 },
     { id: 6, name: "ساعة تاغ هوير", category: "mens", price: 4200, image: "./images/Img6.webp", desc: "ساعة كرونوغراف فاخرة بتصميم رياضي وزجاج مقاوم للخدش.", stock: 2 },
-    { id: 7, name: "ساعة سيتزن إيكو درايف", category: "mens", price: 1700, image: "Img7.webp", desc: "ساعة تعمل بالطاقة الضوئية بدون الحاجة لتغيير البطارية.", stock: 7 },
+    { id: 7, name: "ساعة سيتزن إيكو درايف", category: "mens", price: 1700, image: "/Img7.webp", desc: "ساعة تعمل بالطاقة الضوئية بدون الحاجة لتغيير البطارية.", stock: 7 },
     { id: 8, name: "ساعة فوسيل جلد", category: "mens", price: 1300, image: "./images/Img8.webp", desc: "ساعة عصرية بسوار جلدي ولوحة سوداء أنيقة.", stock: 12 },
     { id: 9, name: "ساعة هاميلتون خاكي", category: "mens", price: 3000, image: "./images/Img9.webp", desc: "ساعة بتصميم عسكري كلاسيكي وأداء موثوق.", stock: 4 },
     { id: 10, name: "ساعة دانيال ويلنغتون", category: "mens", price: 1600, image: "./images/Img10.webp", desc: "ساعة بسيطة وأنيقة بتصميم رفيع يناسب كل المناسبات.", stock: 9 },
