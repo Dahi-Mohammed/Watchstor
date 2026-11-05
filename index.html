@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الساعات الفاخرة - الرئيسية</title>
+    <script>try{if(localStorage.getItem("theme")==="dark")document.documentElement.classList.add("dark")}catch(e){}</script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- شريط التنقل العلوي -->
+    <header>
+        <div class="header-right">
+            <div class="logo"><a href="index.html">⌚ ChronoLux</a></div>
+
+            <!-- أزرار التنقل (الرئيسية + الأقسام) -->
+            <nav class="nav-buttons">
+                <a href="index.html" class="nav-btn"><i class="icon" data-icon="house"></i><span>الرئيسية</span></a>
+                <a href="mens.html" class="nav-btn">ساعات رجالي</a>
+                <a href="womens.html" class="nav-btn">ساعات حريمي</a>
+                <a href="wall.html" class="nav-btn">ساعات حائط</a>
+                <a href="about.html" class="nav-btn">من نحن</a>
+            </nav>
+        </div>
+
+        <!-- شريط البحث -->
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="ابحث عن ساعة أو قسم..." onkeyup="handleSearch(event)">
+            <i class="icon" data-icon="magnifying-glass" onclick="runSearch()"></i>
+        </div>
+
+        <!-- أزرار الهيدر: الوضع الداكن + السلة -->
+        <div class="header-actions">
+            <button class="theme-toggle" onclick="toggleTheme()" title="الوضع الداكن" aria-label="تبديل الوضع الداكن">
+                <i class="icon" data-icon="moon"></i>
+            </button>
+            <div class="cart-icon" onclick="toggleCart()" title="سلة المشتريات">
+            <i class="icon" data-icon="cart-shopping"></i>
+            <span id="cart-count">0</span>
+        </div>
+        </div>
+    </header>
+
+    <!-- البانر الرئيسي -->
+    <section class="hero">
+        <h1>مرحباً بك في عالم الساعات الراقية</h1>
+        <p>اختار القسم الذي يناسب ذوقك من تشكيلتنا الواسعة</p>
+    </section>
+
+
+    <!-- المنتجات -->
+    <section class="container">
+        <h2>أحدث المنتجات</h2>
+        <div class="products-grid" id="home-products">
+            <!-- سيتم تعبئتها بالجافاسكريبت -->
+        </div>
+    </section>
+
+    <!-- سلة المشتريات الجانبية -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>سلة المشتريات</h3>
+            <i class="icon close-cart" data-icon="xmark" onclick="toggleCart()"></i>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- المنتجات المضافة -->
+        </div>
+        <div class="cart-footer">
+            <div class="total">الإجمالي: <span id="total-price">0</span> جنيه</div>
+            <button class="checkout-btn" onclick="checkout()">إتمام الشراء</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

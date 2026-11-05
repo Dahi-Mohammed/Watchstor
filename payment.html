@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدفع بالفيزا</title>
+    <script>try{if(localStorage.getItem("theme")==="dark")document.documentElement.classList.add("dark")}catch(e){}</script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadPaymentPage()">
+
+    <header>
+        <div class="header-right">
+            <div class="logo"><a href="index.html">⌚ ChronoLux</a></div>
+
+            <!-- أزرار التنقل (الرئيسية + الأقسام) -->
+            <nav class="nav-buttons">
+                <a href="index.html" class="nav-btn"><i class="icon" data-icon="house"></i><span>الرئيسية</span></a>
+                <a href="mens.html" class="nav-btn">ساعات رجالي</a>
+                <a href="womens.html" class="nav-btn">ساعات حريمي</a>
+                <a href="wall.html" class="nav-btn">ساعات حائط</a>
+                <a href="about.html" class="nav-btn">من نحن</a>
+            </nav>
+        </div>
+
+        <!-- شريط البحث -->
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="ابحث عن ساعة أو قسم..." onkeyup="handleSearch(event)">
+            <i class="icon" data-icon="magnifying-glass" onclick="runSearch()"></i>
+        </div>
+
+        <!-- أزرار الهيدر: الوضع الداكن + السلة -->
+        <div class="header-actions">
+            <button class="theme-toggle" onclick="toggleTheme()" title="الوضع الداكن" aria-label="تبديل الوضع الداكن">
+                <i class="icon" data-icon="moon"></i>
+            </button>
+            <div class="cart-icon" onclick="toggleCart()" title="سلة المشتريات">
+            <i class="icon" data-icon="cart-shopping"></i>
+            <span id="cart-count">0</span>
+        </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>الدفع بالفيزا</h2>
+
+        <div id="payment-content">
+            <div class="payment-wrapper">
+
+                <!-- بيانات البطاقة -->
+                <div class="pay-card">
+                    <form id="card-form" onsubmit="return submitCardPayment(event)" autocomplete="on">
+                        <h3><i class="icon" data-icon="house"></i> بيانات التوصيل</h3>
+                        <div id="delivery-fields"></div>
+
+                        <h3 class="section-gap"><i class="icon" data-icon="credit-card"></i> بيانات البطاقة</h3>
+                        <div class="form-group">
+                            <label for="card-name">اسم حامل البطاقة</label>
+                            <input type="text" id="card-name" autocomplete="cc-name" placeholder="الاسم كما هو على البطاقة">
+                        </div>
+                        <div class="form-group">
+                            <label for="card-number">رقم البطاقة</label>
+                            <input type="text" id="card-number" inputmode="numeric" autocomplete="cc-number" maxlength="19" placeholder="0000 0000 0000 0000" dir="ltr" oninput="formatCardNumber(this)">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="card-expiry">تاريخ الانتهاء</label>
+                                <input type="text" id="card-expiry" inputmode="numeric" autocomplete="cc-exp" maxlength="5" placeholder="MM/YY" dir="ltr" oninput="formatExpiry(this)">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-cvv">CVV</label>
+                                <input type="password" id="card-cvv" inputmode="numeric" autocomplete="cc-csc" maxlength="4" placeholder="•••" dir="ltr" oninput="this.value = this.value.replace(/\D/g, '')">
+                            </div>
+                        </div>
+                        <div class="error-msg" id="card-error"></div>
+                        <button type="submit" class="checkout-btn" id="pay-btn">ادفع الآن <span id="pay-amount"></span></button>
+                    </form>
+                    <p class="secure-note"><i class="icon" data-icon="lock"></i> نسخة تجريبية: بيانات البطاقة لا يتم إرسالها ولا حفظها.</p>
+                </div>
+
+                <!-- ملخص الطلب -->
+                <div class="pay-card" id="pay-summary"></div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- سلة المشتريات -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>سلة المشتريات</h3>
+            <i class="icon close-cart" data-icon="xmark" onclick="toggleCart()"></i>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="total">الإجمالي: <span id="total-price">0</span> جنيه</div>
+            <button class="checkout-btn" onclick="checkout()">إتمام الشراء</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
