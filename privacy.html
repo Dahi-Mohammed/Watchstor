@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية والاسترجاع - ChronoLux</title>
+    <script>try{if(localStorage.getItem("theme")==="dark")document.documentElement.classList.add("dark")}catch(e){}</script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-right">
+            <div class="logo"><a href="index.html">⌚ ChronoLux</a></div>
+
+            <!-- أزرار التنقل (الرئيسية + الأقسام) -->
+            <nav class="nav-buttons">
+                <a href="index.html" class="nav-btn"><i class="icon" data-icon="house"></i><span>الرئيسية</span></a>
+                <a href="mens.html" class="nav-btn">ساعات رجالي</a>
+                <a href="womens.html" class="nav-btn">ساعات حريمي</a>
+                <a href="wall.html" class="nav-btn">ساعات حائط</a>
+                <a href="about.html" class="nav-btn">من نحن</a>
+            </nav>
+        </div>
+
+        <!-- شريط البحث -->
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="ابحث عن ساعة أو قسم..." onkeyup="handleSearch(event)">
+            <i class="icon" data-icon="magnifying-glass" onclick="runSearch()"></i>
+        </div>
+
+        <!-- أزرار الهيدر: الوضع الداكن + السلة -->
+        <div class="header-actions">
+            <button class="theme-toggle" onclick="toggleTheme()" title="الوضع الداكن" aria-label="تبديل الوضع الداكن">
+                <i class="icon" data-icon="moon"></i>
+            </button>
+            <div class="cart-icon" onclick="toggleCart()" title="سلة المشتريات">
+            <i class="icon" data-icon="cart-shopping"></i>
+            <span id="cart-count">0</span>
+        </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>سياسة الخصوصية</h1>
+        <p>خصوصيتك تهمنا، وهنا نوضح كيف نتعامل مع بياناتك وسياسة الاسترجاع</p>
+    </section>
+
+    <main class="container">
+
+        <div class="about-section">
+            <h2>مقدمة</h2>
+            <p>
+                نحن في ChronoLux نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية. توضح هذه الصفحة أنواع البيانات التي نجمعها
+                وكيف نستخدمها، إضافة إلى سياسة الاسترجاع. باستخدامك للموقع وإتمامك لطلب شراء فأنت توافق على ما جاء فيها.
+            </p>
+            <p class="policy-date">آخر تحديث: نوفمبر 2026</p>
+        </div>
+
+        <div class="about-section">
+            <h2>البيانات التي نجمعها</h2>
+            <ul class="about-list">
+                <li>بيانات التوصيل التي تدخلها عند الطلب: الاسم، ورقم الموبايل، والمحافظة، والعنوان بالتفصيل.</li>
+                <li>تفاصيل طلبك: المنتجات والكميات والمبلغ وطريقة الدفع (عند الاستلام أو بالفيزا).</li>
+                <li>بيانات التفضيلات التي يحفظها المتصفح على جهازك، مثل محتويات السلة واختيارك للوضع الداكن.</li>
+            </ul>
+        </div>
+
+        <div class="about-section">
+            <h2>كيف نستخدم بياناتك</h2>
+            <ul class="about-list">
+                <li>تجهيز طلبك وتوصيله إلى العنوان الذي حددته.</li>
+                <li>التواصل معك على رقم الموبايل لتأكيد الطلب وموعد التسليم أو للرد على استفساراتك.</li>
+                <li>معالجة طلبات الاسترجاع والاستبدال.</li>
+                <li>تحسين خدماتنا وتجربة التسوق في الموقع.</li>
+            </ul>
+        </div>
+
+        <div class="about-section">
+            <h2>بيانات الدفع</h2>
+            <p>
+                لا نقوم بتخزين بيانات بطاقتك (رقم البطاقة أو رمز CVV) على موقعنا. وعند اختيارك الدفع بالفيزا يُطبّق
+                خصم 2% على إجمالي الطلب. أما الدفع عند الاستلام فيتم بالمبلغ الكامل لحظة تسلّم المنتج.
+            </p>
+        </div>
+
+        <div class="about-section">
+            <h2>مشاركة البيانات</h2>
+            <p>
+                لا نبيع بياناتك ولا نؤجّرها لأي جهة. قد نشارك الحد الأدنى اللازم (الاسم والعنوان ورقم الموبايل) مع جهة
+                الشحن فقط لإتمام توصيل طلبك، أو عند وجود طلب رسمي من جهة قانونية مختصة.
+            </p>
+        </div>
+
+        <div class="about-section">
+            <h2>التخزين في المتصفح</h2>
+            <p>
+                يستخدم الموقع التخزين المحلي في متصفحك لحفظ سلة مشترياتك واختيارك للوضع الداكن حتى تجدها عند عودتك.
+                يمكنك حذف هذه البيانات في أي وقت من إعدادات المتصفح.
+            </p>
+        </div>
+
+        <div class="about-section">
+            <h2>حماية بياناتك</h2>
+            <p>
+                نحرص على حفظ بياناتك واستخدامها فقط في الأغراض المذكورة، ونقصر الاطلاع عليها على من يحتاجها لتنفيذ طلبك.
+                مع ذلك لا توجد وسيلة نقل أو تخزين إلكتروني آمنة بنسبة 100%، لذلك ننصحك بعدم مشاركة بياناتك الحساسة مع أي طرف غير موثوق.
+            </p>
+        </div>
+
+        <div class="about-section">
+            <h2>حقوقك</h2>
+            <p>
+                يحق لك طلب الاطلاع على بياناتك التي لدينا أو تعديلها أو حذفها، وذلك بالتواصل معنا على رقم الاستفسار
+                الموجود في صفحة <a href="about.html">من نحن</a>.
+            </p>
+        </div>
+
+        <div class="about-section" id="returns">
+            <h2>سياسة الاسترجاع</h2>
+            <p>
+                يمكنك استرجاع المنتج <b>خلال 14 يوماً من تاريخ استلامه</b>، وذلك من خلال التواصل مع
+                <b>رقم الاستفسار الموجود في صفحة <a href="about.html">من نحن</a></b>.
+            </p>
+            <ul class="about-list">
+                <li>تواصل معنا خلال 14 يوماً من استلام المنتج، واذكر رقم الطلب والاسم المسجّل في الطلب.</li>
+                <li>يجب أن يكون المنتج بحالته الأصلية وغير مستخدم، ومعه عبوته وملحقاته.</li>
+                <li>بعد التواصل نرتّب معك استلام المنتج وفحصه.</li>
+                <li>عند قبول الاسترجاع نتواصل معك لإتمام رد المبلغ أو الاستبدال بما يناسبك.</li>
+            </ul>
+        </div>
+
+        <div class="about-section">
+            <h2>تعديل هذه السياسة</h2>
+            <p>
+                قد نحدّث هذه السياسة من وقت لآخر، وسيظهر تاريخ آخر تحديث أعلى الصفحة. استمرارك في استخدام الموقع
+                بعد التحديث يعني موافقتك على التعديلات.
+            </p>
+        </div>
+
+        <div class="about-section">
+            <h2>تواصل معنا</h2>
+            <p>
+                لأي استفسار عن الخصوصية أو الاسترجاع أو الطلبات، تواصل معنا على رقم الاستفسار الموجود في
+                صفحة <a href="about.html">من نحن</a>.
+            </p>
+        </div>
+
+    </main>
+
+    <!-- سلة المشتريات -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>سلة المشتريات</h3>
+            <i class="icon close-cart" data-icon="xmark" onclick="toggleCart()"></i>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="total">الإجمالي: <span id="total-price">0</span> جنيه</div>
+            <button class="checkout-btn" onclick="checkout()">إتمام الشراء</button>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="about.html">من نحن</a>
+            <a href="privacy.html">سياسة الخصوصية</a>
+            <a href="privacy.html#returns">سياسة الاسترجاع</a>
+        </div>
+        <div class="footer-copy">⌚ ChronoLux - جميع الحقوق محفوظة</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
